@@ -93,8 +93,8 @@ public class Main {
 
 
         //Rawat
-        Rawat rwt = new Rawat();
-        Scanner Rawat = new Scanner(System.in);
+        Rawat rwt = new Rinap();
+        Scanner input = new Scanner(System.in);
         int idrinp;
         String ketrinp;
 
@@ -103,23 +103,23 @@ public class Main {
         System.out.println("2.) Rawat Jalan");
         System.out.println("=======================");
         System.out.print("Masukkan Pilihan    : ");
-        int pil_rwt = Rawat.nextInt();
+        int pil_rwt = input.nextInt();
 
         if (pil_rwt == 1){
-            System.out.print("id Ruang Inap   : ");
-            idrinp = Rawat.nextInt();
-            rwt.setR_inap(idrinp);
-            System.out.print("Keterangan      : " );
-            ketrinp = Rawat.next();
-            rwt.setKeterangan_r(ketrinp);
+            Rawat.idruang();
+            idrinp = input.nextInt();
+            ((Rinap) rwt).setR_inap(idrinp);
+            Rawat.ketruang();
+            ketrinp = input.next();
+            ((Rinap) rwt).setKeterangan_r(ketrinp);
         }
         else if (pil_rwt == 2){
             System.out.print("id Ruang Inap   : ");
-            idrinp = Rawat.nextInt();
-            rwt.setR_inap(idrinp);
+            idrinp = input.nextInt();
+            ((Rinap) rwt).setR_inap(idrinp);
             System.out.print("Keterangan      : " );
-            ketrinp = Rawat.next();
-            rwt.setKeterangan_r(ketrinp);
+            ketrinp = input.next();
+            ((Rinap) rwt).setKeterangan_r(ketrinp);
         }
     }
 }
