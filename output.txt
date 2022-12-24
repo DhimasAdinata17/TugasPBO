@@ -1,0 +1,12 @@
+========PENDAFTARAN=======
+id pendaftaran 	= 100
+Tanggal 	=20/09/2022
+_________________________
+id pasien	 = 20
+Nama Pasien	= Joko
+Alamat	 = Purworejo
+No HP	 = 0852371213
+_________________________
+Resep obat 	 = Paracetamol
+ 3xid periksa 	 = 12
+id Ruangan 	 = 54

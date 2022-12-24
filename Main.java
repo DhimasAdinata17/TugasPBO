@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.util.Scanner;
+import java.io.*;
 public class Main {
     public static void main(String[] args) {
         //Scanner untuk Pasien
@@ -95,7 +97,7 @@ public class Main {
         //Rawat
         Rawat rwt = new Rinap();
         Scanner input = new Scanner(System.in);
-        int idrinp;
+        int idrinp = 0;
         String ketrinp;
 
         System.out.println("===Pilihan Rawat===");
@@ -120,6 +122,29 @@ public class Main {
             System.out.print("Keterangan      : " );
             ketrinp = input.next();
             ((Rinap) rwt).setKeterangan_r(ketrinp);
+        }
+
+        //Output
+        java.io.File file= new java.io.File("output.txt");
+        try {
+            java.io.PrintWriter output = new java.io.PrintWriter(file);
+            output.println("========PENDAFTARAN=======");
+            output.println("id pendaftaran \t= "+idpdf);
+            output.println("Tanggal \t="+tgl);
+            output.println("_________________________");
+            output.println("id pasien\t = "+id);
+            output.println("Nama Pasien\t= "+nama);
+            output.println("Alamat\t = "+alamat);
+            output.println("No HP\t = "+no);
+            output.println("_________________________");
+            output.println("Resep obat \t = "+rsp);
+            output.print(" "+ketp);
+            output.println("id periksa \t = "+idpmk);
+            output.println("id Ruangan \t = "+idrinp);
+            output.close();
+            }catch (FileNotFoundException e){
+                System.out.println("tidak ada file");
+
         }
     }
 }
